@@ -10,12 +10,11 @@
 		029FF0092819D9B00015BF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FF0082819D9B00015BF03 /* AppDelegate.swift */; };
 		029FF00B2819D9B00015BF03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FF00A2819D9B00015BF03 /* SceneDelegate.swift */; };
 		029FF00D2819D9B00015BF03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FF00C2819D9B00015BF03 /* ViewController.swift */; };
-		029FF0102819D9B00015BF03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029FF00E2819D9B00015BF03 /* Main.storyboard */; };
 		029FF0122819D9B20015BF03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029FF0112819D9B20015BF03 /* Assets.xcassets */; };
-		029FF0152819D9B20015BF03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029FF0132819D9B20015BF03 /* LaunchScreen.storyboard */; };
 		029FF0202819D9B20015BF03 /* CalcApp_20Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FF01F2819D9B20015BF03 /* CalcApp_20Tests.swift */; };
 		029FF02A2819D9B20015BF03 /* CalcApp_20UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FF0292819D9B20015BF03 /* CalcApp_20UITests.swift */; };
 		029FF02C2819D9B20015BF03 /* CalcApp_20UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FF02B2819D9B20015BF03 /* CalcApp_20UITestsLaunchTests.swift */; };
+		029FF039281AC31D0015BF03 /* CalcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FF038281AC31D0015BF03 /* CalcModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,15 +39,14 @@
 		029FF0082819D9B00015BF03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		029FF00A2819D9B00015BF03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		029FF00C2819D9B00015BF03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		029FF00F2819D9B00015BF03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		029FF0112819D9B20015BF03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		029FF0142819D9B20015BF03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		029FF0162819D9B20015BF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		029FF01B2819D9B20015BF03 /* CalcApp.20Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcApp.20Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029FF01F2819D9B20015BF03 /* CalcApp_20Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcApp_20Tests.swift; sourceTree = "<group>"; };
 		029FF0252819D9B20015BF03 /* CalcApp.20UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcApp.20UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029FF0292819D9B20015BF03 /* CalcApp_20UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcApp_20UITests.swift; sourceTree = "<group>"; };
 		029FF02B2819D9B20015BF03 /* CalcApp_20UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcApp_20UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		029FF038281AC31D0015BF03 /* CalcModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +100,8 @@
 				029FF0082819D9B00015BF03 /* AppDelegate.swift */,
 				029FF00A2819D9B00015BF03 /* SceneDelegate.swift */,
 				029FF00C2819D9B00015BF03 /* ViewController.swift */,
-				029FF00E2819D9B00015BF03 /* Main.storyboard */,
+				029FF038281AC31D0015BF03 /* CalcModel.swift */,
 				029FF0112819D9B20015BF03 /* Assets.xcassets */,
-				029FF0132819D9B20015BF03 /* LaunchScreen.storyboard */,
 				029FF0162819D9B20015BF03 /* Info.plist */,
 			);
 			path = CalcApp.20;
@@ -231,9 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				029FF0152819D9B20015BF03 /* LaunchScreen.storyboard in Resources */,
 				029FF0122819D9B20015BF03 /* Assets.xcassets in Resources */,
-				029FF0102819D9B00015BF03 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +255,7 @@
 			files = (
 				029FF00D2819D9B00015BF03 /* ViewController.swift in Sources */,
 				029FF0092819D9B00015BF03 /* AppDelegate.swift in Sources */,
+				029FF039281AC31D0015BF03 /* CalcModel.swift in Sources */,
 				029FF00B2819D9B00015BF03 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,25 +291,6 @@
 			targetProxy = 029FF0262819D9B20015BF03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		029FF00E2819D9B00015BF03 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				029FF00F2819D9B00015BF03 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		029FF0132819D9B20015BF03 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				029FF0142819D9B20015BF03 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		029FF02D2819D9B20015BF03 /* Debug */ = {
@@ -441,7 +418,6 @@
 				INFOPLIST_FILE = CalcApp.20/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +444,6 @@
 				INFOPLIST_FILE = CalcApp.20/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
