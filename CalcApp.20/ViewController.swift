@@ -5,10 +5,10 @@
 //  Created by Redghy on 4/27/22.
 //
 
-import UIKit
+//import UIKit
 
-class ViewController: UIViewController {
-    
+//class ViewController: UIViewController {
+    /*
     var tableView: UIView!
     var resultLabel: UILabel!
     weak var CalcMath: UILabel!
@@ -274,3 +274,202 @@ class ViewController: UIViewController {
 
 }
 */
+     */
+    import UIKit
+
+    class ViewController: UIViewController {
+
+        var workkings:String = ""
+        var operatorValidator = ""
+        private var resultLabel: UILabel = {
+            let label = UILabel(frame: CGRect(x: 100, y: 0, width: 200, height: 21))
+                label.center = CGPoint(x: 300, y: 80)
+                label.textAlignment = .center
+                label.text = ""
+            return label
+        }()
+        private var resultLabel2: UILabel = {
+            let labelR = UILabel(frame: CGRect(x: 100, y: 0, width: 200, height: 21))
+                labelR.center = CGPoint(x: 300, y: 120)
+                labelR.textAlignment = .center
+                labelR.text = ""
+
+            return labelR
+        }()
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            
+            
+            //if the horizontal algorithm works then go ahead and die , this language translates everything into strings. nfuhaufi
+                let beamer = "the people breath"
+            
+            
+            
+            
+
+            
+            
+            
+            var horizontal1 = 30
+            var serie1 = ["AC", "+/-", "%"]
+            for i in 0...2{
+                if i > 0{
+                    horizontal1 = horizontal1 + 90
+                }
+                let button = UIButton(frame: CGRect(x: horizontal1, y: 200, width: 80, height: 80))
+                button.backgroundColor = .lightGray
+                button.setTitle(serie1[i], for: .normal)
+                button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+                self.view.addSubview(button)
+            }
+            
+            var horizontal2 = 30
+            var serie2 = ["7", "8", "9"]
+            for i in 0...2{
+                if i > 0{
+                    horizontal2 = horizontal2 + 90
+                }
+                let button = UIButton(frame: CGRect(x: horizontal2, y: 300, width: 80, height: 80))
+                button.backgroundColor = .darkGray
+                button.setTitle(serie2[i], for: .normal)
+                button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+                self.view.addSubview(button)
+            }
+            
+            var horizontal3 = 30
+            var serie3 = ["4", "5", "6"]
+            for i in 0...2{
+                if i > 0{
+                    horizontal3 = horizontal3 + 90
+                }
+                let button = UIButton(frame: CGRect(x: horizontal3, y: 400, width: 80, height: 80))
+                button.backgroundColor = .darkGray
+                button.setTitle(serie3[i], for: .normal)
+                button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+                self.view.addSubview(button)
+            }
+            
+            var horizontal4 = 30
+            var serie4 = ["1", "2", "3"]
+            for i in 0...2{
+                if i > 0{
+                    horizontal4 = horizontal4 + 90
+                }
+                let button = UIButton(frame: CGRect(x: horizontal4, y: 500, width: 80, height: 80))
+                button.backgroundColor = .darkGray
+                button.setTitle(serie4[i], for: .normal)
+                button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+                self.view.addSubview(button)
+            }
+            
+            
+            var horizontal5 = 30
+            var serie5 = ["0", "."]
+            for i in 0...1{
+                if i > 0{
+                    horizontal5 = 120 + 90
+                    let button = UIButton(frame: CGRect(x: horizontal5, y: 600, width: 80, height: 80))
+                    button.backgroundColor = .darkGray
+                    button.setTitle(serie5[i], for: .normal)
+                    button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+                    self.view.addSubview(button)
+                }else{
+                    let button = UIButton(frame: CGRect(x: horizontal5, y: 600, width: 170, height: 80))
+                    button.backgroundColor = .darkGray
+                    button.setTitle(serie5[i], for: .normal)
+                    button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+                    self.view.addSubview(button)
+                }
+                
+                
+            }
+            
+            var vertical = 200
+            var serie6 = ["/", "*", "-", "+", "="]
+            for i in 0...4{
+                if i > 0{
+                    vertical = vertical + 100
+                }
+                let button = UIButton(frame: CGRect(x: 300, y: vertical, width: 80, height: 80))
+                button.backgroundColor = .systemOrange
+                button.setTitle(serie6[i], for: .normal)
+                button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+                self.view.addSubview(button)
+            }
+            
+            self.view.addSubview(resultLabel)
+            self.view.addSubview(resultLabel2)
+            
+          }
+        
+        
+        @objc func clearResult() {
+    //        (resultLabel).text = "0"
+        }
+
+          @objc func buttonAction(_ sender: UIButton!) {
+              
+              func formatResult(result: Double) -> String{
+                  if (result.truncatingRemainder(dividingBy: 1) == 0){
+                      return String(format: "%.2f", result)
+                  }else{
+                      return String(format: "%.0f", result)
+                  }
+              }
+              
+    //          func addToWorkings(value:String){
+    //              workkings = workkings + id!
+    //              resultLabel.text = workkings
+    //          }
+              
+              
+              func validadorOperadores(value: String){
+                  if operatorValidator == value{
+                      print("has \(value) value")
+                  }else{
+                      workkings = workkings + id!
+                      resultLabel.text = workkings
+                      operatorValidator = value
+                  }
+              }
+              
+              
+              let id = sender.currentTitle as? String
+              if id == "AC" {
+                  resultLabel.text = ""
+                  resultLabel2.text = ""
+                  print("Entra a AC")
+              }else if id == "="{
+                  let expresion = NSExpression(format: workkings)
+                  let result = expresion.expressionValue(with: nil, context: nil) as! Double
+                  let resultString = formatResult(result: result)
+                  resultLabel2.text = resultString
+              }else if id == "/" || id == "*" || id == "-" || id == "="{
+                  validadorOperadores(value: id!)
+              }else{
+                  validadorOperadores(value: id!)
+              }
+          }
+    }
+let id = sender.currentTitle as? String
+if id == "AC" {
+    resultsLabel.text + "
+    resultsLabel2.text = ""
+    print("Enter a AC")
+} else if id == "="{
+    let expression = NSEExpression(format: workkings)
+    let result = expressionValue(with: nil, context: nil) as! Double
+    let resultString = formatResult(result: result)
+    resultLabel2.text = resultString
+    
+} else if id == "/" || id == "-" || id == "-" {
+    validadorOperadores(value: id!)
+    {
+        else{
+            validadorOperadores(value: id!)!
+        }
+    }
+}
+
